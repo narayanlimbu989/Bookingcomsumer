@@ -8,7 +8,7 @@ const Homes = ({ data }) => {
     link(`/single/${id}`);
   };
   return (
-    <div className="col-3 py-2" onClick={() => single(data._id)}>
+    <div className="col-3 mobileproperty py-2" onClick={() => single(data._id)}>
       <div className="homelike">
         <img
           className="d-block w-100"

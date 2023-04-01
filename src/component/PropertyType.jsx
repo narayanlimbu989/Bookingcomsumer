@@ -9,7 +9,7 @@ const Property = ({ data, img }) => {
     link(`/search/type=${type}`);
   };
   return (
-    <div className="col-3 py-2" onClick={() => search(data[0])}>
+    <div className="col-3 mobileproperty py-2" onClick={() => search(data[0])}>
       <div className="guestlike">
         <img className="d-block w-100 rounded" src={img} alt="image" />
       </div>

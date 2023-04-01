@@ -5,10 +5,14 @@ import { base_url } from "../Service/Httpservice";
 
 const Search = ({ grid, data }) => {
   const link = useNavigate();
+
   return (
     <>
       {grid ? (
-        <div className="col-3 p-4" style={{ cursor: "pointer" }}>
+        <div
+          className="col-3 mobileproperty p-4 mb-5"
+          style={{ cursor: "pointer" }}
+        >
           <div className="guestlike">
             <img
               className="d-block w-100"
@@ -24,11 +28,14 @@ const Search = ({ grid, data }) => {
             <p className="mb-0">
               {data.address} , {data.city}
             </p>
+            <h6 className="text-success mb-0">
+              Starting price Rs {data.cheapestprice}
+            </h6>
           </div>
         </div>
       ) : (
         <div
-          className="col-12 mb-2 border d-flex"
+          className="mobilenone col-12 mb-2 d-flex"
           style={{ cursor: "pointer" }}
         >
           <div className="col-12 newtry">

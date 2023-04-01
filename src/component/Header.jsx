@@ -6,7 +6,6 @@ import {
   MdOutlineAddBusiness,
   MdLocationOn,
 } from "react-icons/md";
-
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import "react-date-range/dist/styles.css";
@@ -62,9 +61,7 @@ const Header = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-6">
-              <p className="text-white mb-0">
-                Get upto 25% OFF on Booking Friday.
-              </p>
+              <p className="text-white mb-0">Get upto 25% OFF.</p>
             </div>
             <div className="col-6">
               <p className="text-end text-white mb-0">
@@ -78,7 +75,7 @@ const Header = () => {
       </header>
       <header className="header-upper py-3">
         <div className="container-xxl">
-          <div className="row d-flex align-items-center justify-content-between">
+          <div className="headermobile row d-flex align-items-center justify-content-between">
             <div className="col-2 headerlogo">
               <h2>
                 <Link to="/" className="text-white">

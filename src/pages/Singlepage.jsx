@@ -7,29 +7,7 @@ import { CgCalendarDates } from "react-icons/cg";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import { base_url } from "../Service/Httpservice";
-
 import { IoIosWoman } from "react-icons/io";
-
-const images = [
-  {
-    img: "https://img1.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg",
-  },
-  {
-    img: "https://hips.hearstapps.com/bpc.h-cdn.co/assets/18/03/1516296306-oriental-penthouse.jpg",
-  },
-  {
-    img: "https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg",
-  },
-  {
-    img: "https://content.pymnts.com/wp-content/uploads/2016/05/Hotel-Room-Secondary-Market-1000x600.jpg",
-  },
-  {
-    img: "https://media.cnn.com/api/v1/images/stellar/prod/140127103345-peninsula-shanghai-deluxe-mock-up.jpg?q=w_2226,h_1449,x_0,y_0,c_fill",
-  },
-  {
-    img: "https://imageio.forbes.com/specials-images/imageserve/5cdb23b85ea6490008c8706d/0x0.jpg?format=jpg&crop=1599,899,x0,y0,safe&width=1200",
-  },
-];
 
 const Singlepage = () => {
   const [openperson, setopenperson] = useState(false);
@@ -162,12 +140,12 @@ const Singlepage = () => {
               </div>
             </div>
           </div>
-          <div className="imagecollection  col-lg-12  mb-3">
+          <div className="row mb-3">
             {data.photos?.map((i, j) => {
               return (
                 <img
                   key={j}
-                  className="col-4 imageheight p-1"
+                  className="col-xl-4 col-md-6 p-2"
                   src={`${base_url}/${i}`}
                   alt="img"
                 />

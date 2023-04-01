@@ -28,7 +28,7 @@ const Homepage = () => {
   );
   return (
     <div className="container-xxl py-1">
-      <div className="row py-5">
+      <div className="mobilehomefirst row  py-5">
         {felod ? (
           <p>please wait</p>
         ) : (
@@ -37,7 +37,7 @@ const Homepage = () => {
           })
         )}
       </div>
-      <div className="row mb-5">
+      <div className="mobilehomefirst row py-5">
         <h4>Properties like by others</h4>
         {typelod ? (
           <p>please wait</p>
@@ -47,7 +47,7 @@ const Homepage = () => {
           })
         )}
       </div>
-      <div className="row py-5">
+      <div className="mobilehomefirst row  py-5">
         <h4>Home Guests love</h4>
         {featuredlod ? (
           <p>please wait</p>

@@ -9,7 +9,8 @@ import { useFatch } from "../CustomHooks/useFatch";
 const SearchPage = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
-  const [active, setactive] = useState(false);
+  const mediaQuery = window.matchMedia("(max-width: 480px)");
+  const [active, setactive] = useState(mediaQuery.matches ? true : false);
 
   const { id } = useParams();
 
@@ -54,7 +55,7 @@ const SearchPage = () => {
                 <FaThList
                   onClick={() => setactive(false)}
                   style={{ cursor: "pointer" }}
-                  className="sortitem"
+                  className="sortitem mobilenone"
                 />
               </p>
             </div>

@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <footer className="footer-top py-4">
         <div className="container-xxl">
-          <div className="row d-flex justify-content-center">
+          <div className="mobilefooter row d-flex justify-content-center">
             <div className="col-3">
               <h5>contact us</h5>
               <div className="div">
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-2">
+            <div className="col-2 mobilenone">
               <h5>Information</h5>
               <div className="div">
                 <span>Privacy Policy</span>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <span>Terms of Service</span>
               </div>
             </div>
-            <div className="col-2">
+            <div className="col-2 mobilenone">
               <h5>Account</h5>
               <div className="div">
                 <span>Search</span>
@@ -65,7 +65,7 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-3 mobilenone">
               <h5>Our App</h5>
               <div className="div">
                 <span>Download our app & get upto 20%</span>

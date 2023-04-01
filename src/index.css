@@ -263,7 +263,9 @@ headericon {
 /* search */
 .newtry {
   position: relative;
+  border: 1px solid var(--secondary);
   display: flex;
+  padding: 5px;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -476,4 +478,61 @@ img:hover {
 .homelike img {
   min-width: 100%;
   min-height: 100%;
+}
+
+/* for mobile view */
+@media screen and (max-width: 480px) {
+  .headermobile {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .headersearch {
+    width: 98%;
+    margin-top: 10px;
+  }
+  .headerlogo {
+    margin-right: 250px;
+  }
+  .header-upper-links {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+  .menu-links {
+    display: flex;
+    overflow: scroll;
+  }
+  .menu-links::-webkit-scrollbar {
+    display: none;
+  }
+  .header-lower-links {
+    width: max-content;
+  }
+  .mobilehomefirst {
+    display: flex;
+    flex-direction: column;
+  }
+  .featurecontainer,
+  .mobileproperty {
+    width: 100%;
+  }
+  .mobilenone {
+    display: none;
+  }
+  .mobilefooter {
+    gap: 130px;
+    margin-right: 25px;
+  }
+  .sort {
+    margin-top: 10px;
+  }
+  .sort > .price input {
+    border: 1px solid;
+    width: 70px;
+  }
+  .innerreserve {
+    width: 80%;
+  }
 }

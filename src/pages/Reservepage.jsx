@@ -10,6 +10,8 @@ const Reserve = () => {
   const [load, setload] = useState(false);
   const { user } = useSelector((s) => s.auth);
 
+  const mediaQuery = window.matchMedia("(max-width: 480px)");
+
   const calldata = async () => {
     const { data } = await api.get(`/reserve/api/${user?.id}`);
     setReserve(data);
@@ -43,8 +45,11 @@ const Reserve = () => {
           {reserve?.length > 0 ? (
             reserve?.map((i, j) => {
               return (
-                <div key={j} className="reservation d-flex align-items-top justify-content-between">
-                  <div  className="d-flex flex-column gap-1">
+                <div
+                  key={j}
+                  className="reservation d-flex align-items-top justify-content-between"
+                >
+                  <div className="d-flex flex-column gap-1">
                     <h4 className="mb-0">
                       Reservation for {i.reserveDate.length} days
                     </h4>
@@ -65,7 +70,7 @@ const Reserve = () => {
                       );
                     })}
                   </div>
-                  <div>
+                  <div className="mobilenone">
                     <h4>Reserve Date</h4>
                     <div>
                       {i.reserveDate.map((i, j) => {
@@ -82,7 +87,7 @@ const Reserve = () => {
                     disabled={load}
                     onClick={() => cancelReservation(i._id)}
                   >
-                    cancel Reservation
+                    {mediaQuery.matches ? "x" : "cancel Reservation"}
                   </button>
                 </div>
               );
